@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const password = document.getElementById('adminPassword').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/admin/login', {
+            const response = await fetch('/api/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isAuthenticated) return;
 
         try {
-            const response = await fetch('http://localhost:3000/api/admin/credentials');
+            const response = await fetch('/api/admin/credentials');
             const data = await response.json();
 
             if (data.success) {
