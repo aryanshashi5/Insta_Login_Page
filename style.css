@@ -8,8 +8,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #fafafa;
-    color: #262626;
+    background-color: #000000;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -91,8 +91,8 @@ body {
 }
 
 .login-box {
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
+    background: #000000;
+    border: 1px solid #363636;
     padding: 40px;
     margin-bottom: 10px;
 }
@@ -107,6 +107,15 @@ body {
     height: 51px;
     width: auto;
     display: inline-block;
+    filter: invert(1);
+    margin-top: 12px;
+}
+
+.auth-icon {
+    display: block;
+    margin: 0 auto 12px;
+    width: 60px;
+    height: 60px;
 }
 
 .login-form {
@@ -119,16 +128,17 @@ body {
     width: 100%;
     padding: 9px 0 7px 8px;
     font-size: 12px;
-    background: #fafafa;
-    border: 1px solid #dbdbdb;
+    background: #121212;
+    border: 1px solid #363636;
     border-radius: 3px;
     outline: none;
     transition: border-color 0.2s;
+    color: #ffffff;
 }
 
 .login-form input:focus {
     border-color: #a8a8a8;
-    background: #ffffff;
+    background: #121212;
 }
 
 .login-button {
@@ -157,7 +167,7 @@ body {
 .divider .line {
     flex: 1;
     height: 1px;
-    background: #dbdbdb;
+    background: #363636;
 }
 
 .divider-text {
@@ -189,8 +199,8 @@ body {
 }
 
 .signup-box {
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
+    background: #000000;
+    border: 1px solid #363636;
     padding: 25px 40px;
     text-align: center;
     font-size: 14px;
